@@ -20,21 +20,27 @@ with open("relations.json", "r") as f:
 url = "https://jdm-api.demo.lirmm.fr/v0/"
 
 def relationDepuisUnNoeud(node,relationid):
+    directory = "requetes/relations"
+    if not os.path.exists(directory):
+        os.makedirs(directory)
     
-    filename = os.path.join("requetes/relations", f"{node}_{nomRelationParId(relationid)}.json")
+    filename = os.path.join(directory, f"{node}_{nomRelationParId(relationid)}.json")
     if os.path.exists(filename):
         with(open(filename,"r")) as f:
             return json.load(f)
     else: 
         req = f"{url}relations/from/{node}?types_ids={relationid}"
         r = requests.get(req)
-        r = sorted()
 
         if r.status_code == 200:
             data = r.json()
+            data_sorted = sorted(data["relations"], key=lambda x: x["w"], reverse=True) 
+            data = {**data, "relations": data_sorted} #On trie les relations par poids decroissant
+
             with open(filename, "w", encoding="utf-8") as f:
                 json.dump(data, f, ensure_ascii=False, indent=4)
             return data
+        
         else:
             print(f"Erreur {r.status_code} lors de la requête : {req}")
             return None
@@ -43,13 +49,18 @@ def relationDepuisUnNoeud(node,relationid):
 
 #https://jdm-api.demo.lirmm.fr/v0/relations/to/{node2_name}
 def relationVersUnNoeud(node,relationid):
-    filename = os.path.join("requetes/relations", f"{nomRelationParId(relationid)}_{node}.json")
+    directory = "requetes/relations"
+    if not os.path.exists(directory):
+        os.makedirs(directory)
+
+    filename = os.path.join(directory, f"{nomRelationParId(relationid)}_{node}.json")
     if os.path.exists(filename):
         with(open(filename,"r")) as f:
             return json.load(f)
     else: 
         req = f"{url}relations/to/{node}?types_ids={relationid}"
         r = requests.get(req)
+        
 
         if r.status_code == 200:
             data = r.json()
@@ -71,14 +82,14 @@ def noeudParId(nodeid):
 #Fct qui prend en paramètre deux listes de relations et qui retourne une liste de tuples (noeud_commun, poids)
 def intersection(rel_depuis,rel_vers):
     res = []
-    for r in rel_depuis["relations"]:
+    for r in rel_depuis["relations"][:10]:
         for s in rel_vers["relations"]:
             if r["node2"] == s["node1"] and r["w"]>0 and s['w']>0: #Pour l'instant on supprimes les relations avec des poids négatifs
                 w = statistics.geometric_mean([r["w"],s["w"]])
                 res.append((r["node2"],round(w,1)))
     res = sorted(res,key=lambda x: x[1],reverse=True)
-    print(res)
     return res
+
 
 #Fct qui prend en paramètre un id de noeud et qui retourne son nom
 def nomNoeudParId(nodeid):
@@ -140,16 +151,12 @@ def __main__():
         print("Il n'y a pas de relation entre les deux mots")
 
     else:
-        print("Résultats: (max 10)") 
-        #Trier resultat par poids décroissant
-             
+        print("Résultats: (max 10)")              
         for i in range (len(res)):
             print(i+1,"| oui |",mot_source,nomRelationParId(id_relation_1),nomNoeudParId(res[i][0]),"&",nomNoeudParId(res[i][0]),nomRelationParId(id_relation_2),mot_cible,"| ",res[i][1])
 
 
+
 if __name__ == "__main__":
-    __main__()
-
-
-
+   __main__()
 
