@@ -4,11 +4,19 @@ import statistics
 import json
 import os 
 
+'''
+Ce qu'on a déjà fait:
+- On stocke les 10 relations sortantes les plus importantes d'un noeud dans un fichier node_relation.json
+- On fait un intersection des relations sortantes d'un noeud avec les relations entrantes d'un autre noeud
+- On fait des relations inductives, déductives, transitives et synonymes
+'''
+
 #TODO: 
 #    -gérer les relations négatives (réponses négative ou juste supprimer les relations négatives?)
 #     -comprendre annotations 
 #     - est-ce qu'on doit afficher tous les types de relations (directes, inductives,...) ou demander à l'utilisateur comme fait actuellement?
 #    - trier les résultats de relation 1 par ordre décroissant des poids puis vérifier un par un si r2 ou pas 
+#     - chercher des schémas de relations supplémentaires (ex: relation de synonymie)
 
 #raffsem  id=1
 #raffmorpho id=2
@@ -19,6 +27,9 @@ with open("relations.json", "r") as f:
 
 url = "https://jdm-api.demo.lirmm.fr/v0/"
 
+#Fct qui prend en paramètre un noeud et un id de relation et qui retourne les relations du noeud avec le type de relation donné par poids décroissant
+#Résultats sotckés dans un fichier node_relation.json
+#https://jdm-api.demo.lirmm.fr/v0/relations/from/{node_name}?types_ids={relation_id}
 def relationDepuisUnNoeud(node,relationid):
     directory = "requetes/relations"
     if not os.path.exists(directory):
@@ -78,6 +89,45 @@ def noeudParId(nodeid):
     return requests.get(req).json()
 
 
+#https://jdm-api.demo.lirmm.fr/v0/from/:r{relation_id}?types_ids=998
+#lien pour tester : https://jdm-api.demo.lirmm.fr/v0/relations/from/:r1863523?types_ids=998
+def getAnnotations(relationid):
+    req = url+"relations/from/:r"+str(relationid)+"?types_ids=998"
+    res = requests.get(req).json()
+    annotations=[]
+    
+    for r in res["nodes"]:
+        annotations.append(r["name"])
+    return annotations
+    
+
+
+
+#Fct qui modifie le scoring en fonction de l'annotation de la relation
+def scoringAvecAnnotations(annotation):
+    if annotation=="possible" or annotation=="probable":
+        return 1
+    elif annotation=="toujours vrai" or annotation=="constitutif":
+        return 2
+    elif annotation=="pertinent":
+        return 1.5
+    elif annotation=="non pertinent":
+        return 0.8
+    elif annotation=="improbable":
+        return 0.2
+    elif annotation=="impossible":
+        return 0
+    elif annotation=="vrai":
+        return 1.2
+    elif annotation=="rare":
+        return 0.5
+    elif annotation=="fréquent":
+        return 1.1
+    elif annotation=="factuel":
+        return 1
+    elif annotation=="subjectif":
+        return 0.8
+    else : return 1
 
 #Fct qui prend en paramètre deux listes de relations et qui retourne une liste de tuples (noeud_commun, poids)
 def intersection(rel_depuis,rel_vers):
@@ -109,6 +159,8 @@ def idRelationParNom(nom):
         if data[i]["nom"] == nom:
             return i
     return -1
+
+print()
 
 def __main__():
     print("Bienvenue dans le projet de recherche de relations entre les mots")
@@ -157,6 +209,6 @@ def __main__():
 
 
 
-if __name__ == "__main__":
-   __main__()
+#if __name__ == "__main__":
+   #__main__()
 
