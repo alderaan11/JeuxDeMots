@@ -1,0 +1,131 @@
+{
+    "nodes": [
+        {
+            "id": 2442,
+            "name": "vivre",
+            "type": 1,
+            "w": 11074
+        },
+        {
+            "id": 43601,
+            "name": "se reproduire",
+            "type": 1,
+            "w": 587
+        },
+        {
+            "id": 78635,
+            "name": "pousser",
+            "type": 1,
+            "w": 4084
+        },
+        {
+            "id": 120389,
+            "name": "baobab",
+            "type": 1,
+            "w": 76
+        },
+        {
+            "id": 124600,
+            "name": "mourir",
+            "type": 1,
+            "w": 9700
+        },
+        {
+            "id": 240956,
+            "name": "pousser>61938",
+            "type": 1,
+            "w": 22
+        },
+        {
+            "id": 251694,
+            "name": "mourir>126720",
+            "type": 1,
+            "w": 286
+        },
+        {
+            "id": 259820,
+            "name": "vivre>160251",
+            "type": 1,
+            "w": 104
+        }
+    ],
+    "relations": [
+        {
+            "id": 365336554,
+            "node1": 120389,
+            "node2": 240956,
+            "type": 24,
+            "w": 105.0
+        },
+        {
+            "id": 2842126,
+            "node1": 120389,
+            "node2": 2442,
+            "type": 24,
+            "w": 30.0
+        },
+        {
+            "id": 2841582,
+            "node1": 120389,
+            "node2": 43601,
+            "type": 24,
+            "w": 30.0
+        },
+        {
+            "id": 474431151,
+            "node1": 120389,
+            "node2": 78635,
+            "type": 24,
+            "w": 30.0
+        },
+        {
+            "id": 2843530,
+            "node1": 120389,
+            "node2": 124600,
+            "type": 24,
+            "w": 30.0
+        },
+        {
+            "id": 2847076,
+            "node1": 120389,
+            "node2": 251694,
+            "type": 24,
+            "w": 30.0
+        },
+        {
+            "id": 2925895,
+            "node1": 120389,
+            "node2": 259820,
+            "type": 24,
+            "w": 30.0
+        }
+    ],
+    "request": {
+        "types_ids": [
+            24
+        ],
+        "not_types_ids": null,
+        "min_weight": null,
+        "max_weight": null,
+        "start": "2025-03-14T13:02:26.823161",
+        "relation_fields": [
+            "id",
+            "node1",
+            "node2",
+            "type",
+            "w"
+        ],
+        "node_fields": [
+            "id",
+            "name",
+            "type",
+            "w"
+        ],
+        "without_nodes": false,
+        "node1": "baobab",
+        "#relations": 7,
+        "max_relation_weight": 105.0,
+        "#nodes": 8,
+        "duration": "0:00:00.008165"
+    }
+}

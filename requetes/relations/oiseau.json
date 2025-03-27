@@ -1,0 +1,326 @@
+{
+    "nodes": [
+        {
+            "id": 13662,
+            "name": "fauconnerie",
+            "type": 1,
+            "w": 50
+        },
+        {
+            "id": 35143,
+            "name": "biologie",
+            "type": 1,
+            "w": 3581
+        },
+        {
+            "id": 36482,
+            "name": "ornithologie",
+            "type": 1,
+            "w": 344
+        },
+        {
+            "id": 38344,
+            "name": "sociologie",
+            "type": 1,
+            "w": 2193
+        },
+        {
+            "id": 43729,
+            "name": "médecine vétérinaire",
+            "type": 1,
+            "w": 72
+        },
+        {
+            "id": 46057,
+            "name": "oiseaux",
+            "type": 1,
+            "w": 3052
+        },
+        {
+            "id": 63281,
+            "name": "maçonnerie",
+            "type": 1,
+            "w": 208
+        },
+        {
+            "id": 71539,
+            "name": "animaux",
+            "type": 1,
+            "w": 3595
+        },
+        {
+            "id": 76247,
+            "name": "vétérinaire",
+            "type": 1,
+            "w": 628
+        },
+        {
+            "id": 117095,
+            "name": "zoologie",
+            "type": 1,
+            "w": 2501
+        },
+        {
+            "id": 140176,
+            "name": "oiseau",
+            "type": 1,
+            "w": 10377
+        },
+        {
+            "id": 143669,
+            "name": "vertébrés",
+            "type": 1,
+            "w": 86
+        },
+        {
+            "id": 151907,
+            "name": "Biologie",
+            "type": 1,
+            "w": 863
+        },
+        {
+            "id": 152125,
+            "name": "Zoologie",
+            "type": 1,
+            "w": 212
+        },
+        {
+            "id": 152578,
+            "name": "Vétérinaire",
+            "type": 1,
+            "w": 198
+        },
+        {
+            "id": 155779,
+            "name": "véhicules",
+            "type": 1,
+            "w": 2982
+        },
+        {
+            "id": 246797,
+            "name": "biologie>246796",
+            "type": 1,
+            "w": 148
+        },
+        {
+            "id": 273420,
+            "name": "aves",
+            "type": 777,
+            "w": 54
+        },
+        {
+            "id": 6825581,
+            "name": "en:aves",
+            "type": 1,
+            "w": 25
+        },
+        {
+            "id": 6947917,
+            "name": "en:vertebrata",
+            "type": 1,
+            "w": 4
+        },
+        {
+            "id": 7123482,
+            "name": "en:veterinary medicine",
+            "type": 1,
+            "w": 25
+        },
+        {
+            "id": 15050638,
+            "name": "en:Vertebrata",
+            "type": 1,
+            "w": 25
+        },
+        {
+            "id": 108544391,
+            "name": "Médecine vétérinaire",
+            "type": 1,
+            "w": 25
+        }
+    ],
+    "relations": [
+        {
+            "id": 96458554,
+            "node1": 140176,
+            "node2": 13662,
+            "type": 3,
+            "w": 34.0
+        },
+        {
+            "id": 30912914,
+            "node1": 140176,
+            "node2": 35143,
+            "type": 3,
+            "w": 335.0
+        },
+        {
+            "id": 443965,
+            "node1": 140176,
+            "node2": 36482,
+            "type": 3,
+            "w": 29.0
+        },
+        {
+            "id": 418228793,
+            "node1": 140176,
+            "node2": 38344,
+            "type": 3,
+            "w": 38.0
+        },
+        {
+            "id": 31351439,
+            "node1": 140176,
+            "node2": 43729,
+            "type": 3,
+            "w": 35.0
+        },
+        {
+            "id": 627086,
+            "node1": 140176,
+            "node2": 46057,
+            "type": 3,
+            "w": 31.0
+        },
+        {
+            "id": 97138129,
+            "node1": 140176,
+            "node2": 63281,
+            "type": 3,
+            "w": 32.0
+        },
+        {
+            "id": 96622749,
+            "node1": 140176,
+            "node2": 71539,
+            "type": 3,
+            "w": 26.0
+        },
+        {
+            "id": 30878016,
+            "node1": 140176,
+            "node2": 76247,
+            "type": 3,
+            "w": 163.0
+        },
+        {
+            "id": 499220,
+            "node1": 140176,
+            "node2": 117095,
+            "type": 3,
+            "w": 1216.0
+        },
+        {
+            "id": 31221767,
+            "node1": 140176,
+            "node2": 143669,
+            "type": 3,
+            "w": 30.0
+        },
+        {
+            "id": 165673,
+            "node1": 140176,
+            "node2": 151907,
+            "type": 3,
+            "w": 58.0
+        },
+        {
+            "id": 164693,
+            "node1": 140176,
+            "node2": 152125,
+            "type": 3,
+            "w": 68.0
+        },
+        {
+            "id": 164694,
+            "node1": 140176,
+            "node2": 152578,
+            "type": 3,
+            "w": 85.0
+        },
+        {
+            "id": 485885974,
+            "node1": 140176,
+            "node2": 155779,
+            "type": 3,
+            "w": 23.0
+        },
+        {
+            "id": 15679010,
+            "node1": 140176,
+            "node2": 246797,
+            "type": 3,
+            "w": -29.0
+        },
+        {
+            "id": 385254847,
+            "node1": 140176,
+            "node2": 273420,
+            "type": 3,
+            "w": 28.0
+        },
+        {
+            "id": 385271766,
+            "node1": 140176,
+            "node2": 6825581,
+            "type": 3,
+            "w": 30.0
+        },
+        {
+            "id": 385230136,
+            "node1": 140176,
+            "node2": 6947917,
+            "type": 3,
+            "w": 32.0
+        },
+        {
+            "id": 635059784,
+            "node1": 140176,
+            "node2": 7123482,
+            "type": 3,
+            "w": 25.0
+        },
+        {
+            "id": 775362052,
+            "node1": 140176,
+            "node2": 15050638,
+            "type": 3,
+            "w": 25.0
+        },
+        {
+            "id": 598063663,
+            "node1": 140176,
+            "node2": 108544391,
+            "type": 3,
+            "w": 35.0
+        }
+    ],
+    "request": {
+        "types_ids": [
+            3
+        ],
+        "not_types_ids": null,
+        "min_weight": null,
+        "max_weight": null,
+        "start": "2025-03-27T13:24:12.706195",
+        "relation_fields": [
+            "id",
+            "node1",
+            "node2",
+            "type",
+            "w"
+        ],
+        "node_fields": [
+            "id",
+            "name",
+            "type",
+            "w"
+        ],
+        "without_nodes": false,
+        "node1": "oiseau",
+        "#relations": 22,
+        "max_relation_weight": 1216.0,
+        "#nodes": 23,
+        "duration": "0:00:00.310296"
+    }
+}

@@ -1,0 +1,196 @@
+{
+    "nodes": [
+        {
+            "id": 6094,
+            "name": "se procurer",
+            "type": 1,
+            "w": 58
+        },
+        {
+            "id": 22824,
+            "name": "aller",
+            "type": 1,
+            "w": 87005
+        },
+        {
+            "id": 33871,
+            "name": "bouger",
+            "type": 1,
+            "w": 885
+        },
+        {
+            "id": 59303,
+            "name": "se déplacer",
+            "type": 1,
+            "w": 845
+        },
+        {
+            "id": 73827,
+            "name": "voler",
+            "type": 1,
+            "w": 4803
+        },
+        {
+            "id": 77822,
+            "name": "venir",
+            "type": 1,
+            "w": 55189
+        },
+        {
+            "id": 83670,
+            "name": "agir",
+            "type": 1,
+            "w": 5640
+        },
+        {
+            "id": 86306,
+            "name": "prendre",
+            "type": 1,
+            "w": 45046
+        },
+        {
+            "id": 87528,
+            "name": "faire",
+            "type": 1,
+            "w": 159835
+        },
+        {
+            "id": 101793,
+            "name": "déplacer",
+            "type": 1,
+            "w": 2294
+        },
+        {
+            "id": 112665,
+            "name": "évoluer",
+            "type": 1,
+            "w": 1697
+        },
+        {
+            "id": 112929,
+            "name": "action",
+            "type": 1,
+            "w": 6495
+        },
+        {
+            "id": 14065129,
+            "name": "se déplacer dans les airs",
+            "type": 1,
+            "w": 25
+        }
+    ],
+    "relations": [
+        {
+            "id": 588835486,
+            "node1": 73827,
+            "node2": 59303,
+            "type": 6,
+            "w": 149.0
+        },
+        {
+            "id": 588835474,
+            "node1": 73827,
+            "node2": 33871,
+            "type": 6,
+            "w": 101.0
+        },
+        {
+            "id": 588835477,
+            "node1": 73827,
+            "node2": 22824,
+            "type": 6,
+            "w": 61.0
+        },
+        {
+            "id": 588835482,
+            "node1": 73827,
+            "node2": 77822,
+            "type": 6,
+            "w": 61.0
+        },
+        {
+            "id": 588835478,
+            "node1": 73827,
+            "node2": 83670,
+            "type": 6,
+            "w": 60.0
+        },
+        {
+            "id": 588835483,
+            "node1": 73827,
+            "node2": 86306,
+            "type": 6,
+            "w": 57.0
+        },
+        {
+            "id": 583491236,
+            "node1": 73827,
+            "node2": 14065129,
+            "type": 6,
+            "w": 55.0
+        },
+        {
+            "id": 588835471,
+            "node1": 73827,
+            "node2": 101793,
+            "type": 6,
+            "w": 53.0
+        },
+        {
+            "id": 588835468,
+            "node1": 73827,
+            "node2": 112665,
+            "type": 6,
+            "w": 52.0
+        },
+        {
+            "id": 184370542,
+            "node1": 73827,
+            "node2": 6094,
+            "type": 6,
+            "w": 51.0
+        },
+        {
+            "id": 588835479,
+            "node1": 73827,
+            "node2": 87528,
+            "type": 6,
+            "w": 51.0
+        },
+        {
+            "id": 78607577,
+            "node1": 73827,
+            "node2": 112929,
+            "type": 6,
+            "w": -26.0
+        }
+    ],
+    "request": {
+        "types_ids": [
+            6
+        ],
+        "not_types_ids": null,
+        "min_weight": null,
+        "max_weight": null,
+        "start": "2025-03-17T17:19:59.218878",
+        "relation_fields": [
+            "id",
+            "node1",
+            "node2",
+            "type",
+            "w"
+        ],
+        "node_fields": [
+            "id",
+            "name",
+            "type",
+            "w"
+        ],
+        "without_nodes": false,
+        "node1": "voler",
+        "#relations": 12,
+        "max_relation_weight": 149.0,
+        "#nodes": 13,
+        "duration": "0:00:00.010187"
+    }
+}

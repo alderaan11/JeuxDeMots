@@ -1,0 +1,118 @@
+{
+    "nodes": [
+        {
+            "id": 120389,
+            "name": "baobab",
+            "type": 1,
+            "w": 76
+        },
+        {
+            "id": 5687340,
+            "name": "baobab za",
+            "type": 777,
+            "w": 25
+        },
+        {
+            "id": 5829132,
+            "name": "baobab africain",
+            "type": 777,
+            "w": 25
+        },
+        {
+            "id": 213614250,
+            "name": "Baobab africain",
+            "type": 1,
+            "w": 0
+        },
+        {
+            "id": 267475212,
+            "name": "baobab juice",
+            "type": 1,
+            "w": 0
+        },
+        {
+            "id": 275589900,
+            "name": "baobab qui grandit",
+            "type": 1,
+            "w": 0
+        },
+        {
+            "id": 284350374,
+            "name": "baobab en poudre",
+            "type": 1,
+            "w": 0
+        }
+    ],
+    "relations": [
+        {
+            "id": 112192809,
+            "node1": 5687340,
+            "node2": 120389,
+            "type": 6,
+            "w": 27.0
+        },
+        {
+            "id": 113761190,
+            "node1": 5829132,
+            "node2": 120389,
+            "type": 6,
+            "w": 31.0
+        },
+        {
+            "id": 682244897,
+            "node1": 267475212,
+            "node2": 120389,
+            "type": 6,
+            "w": 26.0
+        },
+        {
+            "id": 688071442,
+            "node1": 275589900,
+            "node2": 120389,
+            "type": 6,
+            "w": 25.0
+        },
+        {
+            "id": 722137308,
+            "node1": 213614250,
+            "node2": 120389,
+            "type": 6,
+            "w": 15.0
+        },
+        {
+            "id": 737094016,
+            "node1": 284350374,
+            "node2": 120389,
+            "type": 6,
+            "w": 25.0
+        }
+    ],
+    "request": {
+        "types_ids": [
+            6
+        ],
+        "not_types_ids": null,
+        "min_weight": null,
+        "max_weight": null,
+        "start": "2025-03-17T16:55:09.630215",
+        "relation_fields": [
+            "id",
+            "node1",
+            "node2",
+            "type",
+            "w"
+        ],
+        "node_fields": [
+            "id",
+            "name",
+            "type",
+            "w"
+        ],
+        "without_nodes": false,
+        "node2": "baobab",
+        "#relations": 6,
+        "max_relation_weight": 31.0,
+        "#nodes": 7,
+        "duration": "0:00:00.259570"
+    }
+}
